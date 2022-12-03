@@ -1,74 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Accordion from "./components/Accordion/Accordion";
+import {Raiting} from "./components/Rating/Rating";
 
 
 function hello() {
     alert("hello IT-ramasutra")
 }
 
-hello()
+// hello()
 
 const App = () => {
     return (
         <div>
-            <AppTitle />
-            <Raiting/>
-            <Accordion/>
-            <Raiting/>
+            <PageTitle title ={"This is App component"}/>
+            Article 1
+            <Raiting value={3} />
+            <Accordion title={"Accordion"}/>
+            <Accordion title={"AccordionTite"}/>
+            Article 2
+            <Raiting value={0} />
+            <Raiting value={1} />
+            <Raiting value={2} />
+            <Raiting value={3} />
+            <Raiting value={4} />
+            <Raiting value={5} />
         </div>
 
     );
 }
 
-function AppTitle() {
-    return <>"Hello world"</>
+function PageTitle(props: any) {
+    return <h1>{props.title}</h1>
 }
 
-const Raiting = () => {
-    return (
-        <div>
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-        </div>
 
-    )
-}
-
-const Accordion = () => {
-    return (
-        <div>
-            <AccordionTite />
-          <AccordionBody />
-        </div>
-
-    )
-}
-const AccordionTite = () => {
-    return (
-            <h3>меню</h3>
-    )
-}
-
-const AccordionBody = () => {
-    return (
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
-    )
-}
-const Star = () => {
-    return (
-        <div>
-            Star
-        </div>
-
-    )
-}
 
 export default App;
