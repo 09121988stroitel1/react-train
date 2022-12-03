@@ -1,6 +1,9 @@
 import React from "react";
 
-export const Raiting = (props: any) => {
+type RaitingProps = {
+    value: number
+}
+export const Raiting = (props: RaitingProps) => {
     if(props.value === 1) {
         return (
             <div>
@@ -73,7 +76,9 @@ export const Raiting = (props: any) => {
     )
 }
 
-
+type StarPropsType = {
+    selected: boolean
+}
 
 const Star = (props: any) => {
     if(props.selected === true) {
