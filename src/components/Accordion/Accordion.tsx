@@ -5,24 +5,37 @@ type AccordionPropsType = {
     titleValue: string,
     collapsedMenu: boolean
 }
-const Accordion = (props: AccordionPropsType) => {
+const Accordion1 = (props: AccordionPropsType) => {
+    // debugger
     if(props.collapsedMenu === true) {
         return (
             <div>
                 <AccordionTite title={props.titleValue}/>
-                <AccordionBody/>
-            </div>
 
+            </div>
         )
     } else {
         return (
             <div>
                 <AccordionTite title={props.titleValue}/>
+                <AccordionBody />
             </div>
-
         )
     }
 }
+
+
+export const Accordion2 = (props: AccordionPropsType) => {
+        return (
+            <div>
+                <AccordionTite title={props.titleValue}/>
+                {!props.collapsedMenu && <AccordionBody />}
+
+            </div>
+        )
+}
+
+
 
 type AccordionTitePropsType = {
     title: string
@@ -48,4 +61,4 @@ const AccordionBody = () => {
         </ul>
     )
 }
-export default Accordion;
+export default Accordion1;
