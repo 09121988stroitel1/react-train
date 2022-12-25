@@ -1,23 +1,5 @@
 import React from "react";
 
-// Result 2
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Result 1
 import {ColorButtonType, FilterButtonType} from "./OnOff";
 import './OnOFF.css'
 
